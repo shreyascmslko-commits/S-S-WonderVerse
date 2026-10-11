@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 S&S WonderVerse – Explore and Have Fun!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Galaxy Background -->
+    <div class="galaxy-bg">
+        <div class="stars"></div>
+        <div class="planets">
+            <div class="planet planet-1"></div>
+            <div class="planet planet-2"></div>
+            <div class="planet planet-3"></div>
+        </div>
+        <div class="aurora"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">WonderVerse</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#watch" class="nav-link">Watch Zone</a></li>
+                <li><a href="#ideas" class="nav-link">Idea Lab</a></li>
+                <li><a href="#quiz" class="nav-link">Quizzes</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button id="themeToggle" class="theme-btn" title="Toggle theme">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-word">Welcome</span>
+                <span class="title-word">to</span>
+                <span class="title-word">WonderVerse</span>
+            </h1>
+            <p class="hero-subtitle">Explore the magic of creativity, learning, and innovation</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('watch').scrollIntoView({behavior: 'smooth'})">Explore Videos</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('ideas').scrollIntoView({behavior: 'smooth'})">Generate Ideas</button>
+            </div>
+        </div>
+        <div class="floating-cards">
+            <div class="card card-1">
+                <span class="card-icon">🎥</span>
+                <p>Videos</p>
+            </div>
+            <div class="card card-2">
+                <span class="card-icon">💡</span>
+                <p>Ideas</p>
+            </div>
+            <div class="card card-3">
+                <span class="card-icon">🧠</span>
+                <p>Quizzes</p>
+            </div>
+            <div class="card card-4">
+                <span class="card-icon">🤖</span>
+                <p>AI</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Watch Zone Section -->
+    <section id="watch" class="watch-zone">
+        <div class="section-header">
+            <h2>🎬 Watch Zone</h2>
+            <p>Discover amazing content from our channel</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="featured">Featured</button>
+            <button class="tab-btn" data-tab="videos">Videos</button>
+            <button class="tab-btn" data-tab="shorts">Shorts</button>
+            <button class="tab-btn" data-tab="playlists">Playlists</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- Featured Tab -->
+            <div id="featured" class="tab-pane active">
+                <div class="featured-container" id="featuredContainer">
+                    <div class="loading">Loading featured content...</div>
+                </div>
+            </div>
+
+            <!-- Videos Tab -->
+            <div id="videos" class="tab-pane">
+                <div class="videos-grid" id="videosGrid">
+                    <div class="loading">Loading videos...</div>
+                </div>
+            </div>
+
+            <!-- Shorts Tab -->
+            <div id="shorts" class="tab-pane">
+                <div class="shorts-grid" id="shortsGrid">
+                    <div class="loading">Loading shorts...</div>
+                </div>
+            </div>
+
+            <!-- Playlists Tab -->
+            <div id="playlists" class="tab-pane">
+                <div class="playlists-grid" id="playlistsGrid">
+                    <div class="loading">Loading playlists...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="youtube-links">
+            <a href="https://www.youtube.com/@UC28hqtuIPXdBXCTZxm76wdQ" target="_blank" class="btn btn-primary">Visit Full Channel</a>
+            <a href="https://www.youtube.com/@UC28hqtuIPXdBXCTZxm76wdQ/videos" target="_blank" class="btn btn-secondary">All Videos</a>
+            <a href="https://www.youtube.com/@UC28hqtuIPXdBXCTZxm76wdQ/shorts" target="_blank" class="btn btn-secondary">All Shorts</a>
+        </div>
+    </section>
+
+    <!-- Idea Lab Section -->
+    <section id="ideas" class="idea-lab">
+        <div class="section-header">
+            <h2>💡 Idea Lab</h2>
+            <p>Spark your creativity with AI-powered ideas</p>
+        </div>
+
+        <div class="idea-generator">
+            <div class="category-selector">
+                <h3>Select a Category:</h3>
+                <div class="categories">
+                    <button class="category-btn active" data-category="robotics">🤖 Robotics</button>
+                    <button class="category-btn" data-category="arduino">⚙️ Arduino</button>
+                    <button class="category-btn" data-category="ai">🧠 AI</button>
+                    <button class="category-btn" data-category="science">🔬 Science</button>
+                    <button class="category-btn" data-category="art">🎨 Art</button>
+                    <button class="category-btn" data-category="writing">✍️ Writing</button>
+                    <button class="category-btn" data-category="environment">🌍 Environment</button>
+                    <button class="category-btn" data-category="education">📚 Education</button>
+                </div>
+            </div>
+
+            <div class="difficulty-selector">
+                <h3>Difficulty Level:</h3>
+                <div class="difficulties">
+                    <button class="difficulty-btn active" data-difficulty="beginner">Beginner</button>
+                    <button class="difficulty-btn" data-difficulty="intermediate">Intermediate</button>
+                    <button class="difficulty-btn" data-difficulty="advanced">Advanced</button>
+                </div>
+            </div>
+
+            <div class="idea-display" id="ideaDisplay">
+                <p class="idea-prompt">Select a category and click "Generate Idea" to begin!</p>
+            </div>
+
+            <div class="idea-buttons">
+                <button class="btn btn-primary" id="generateIdeaBtn">✨ Generate Idea</button>
+                <button class="btn btn-secondary" id="copyIdeaBtn">📋 Copy Idea</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="section-header">
+            <h2>🧠 Quizzes</h2>
+            <p>Test your knowledge and earn certificates</p>
+        </div>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="quiz-start">
+                <h3>Select a Quiz:</h3>
+                <div class="quiz-list" id="quizList">
+                    <button class="quiz-btn" data-quiz="science">🔬 Science Quiz</button>
+                    <button class="quiz-btn" data-quiz="tech">💻 Tech Quiz</button>
+                    <button class="quiz-btn" data-quiz="creativity">🎨 Creativity Quiz</button>
+                </div>
+            </div>
+
+            <div class="quiz-content" id="quizContent" style="display: none;">
+                <div class="quiz-header">
+                    <h3 id="quizTitle"></h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="questionCounter"></p>
+                </div>
+
+                <div class="question-container">
+                    <p id="questionText" class="question-text"></p>
+                    <div class="options" id="optionsContainer"></div>
+                </div>
+
+                <button class="btn btn-primary" id="nextBtn" style="display: none;">Next Question</button>
+            </div>
+
+            <div class="quiz-results" id="quizResults" style="display: none;">
+                <h3>Quiz Complete!</h3>
+                <div class="score-display" id="scoreDisplay"></div>
+                <p id="resultMessage"></p>
+                <button class="btn btn-primary" id="downloadCertBtn" style="display: none;">📜 Download Certificate</button>
+                <button class="btn btn-secondary" id="retakeQuizBtn">Retake Quiz</button>
+            </div>
+
+            <div class="certificate-form" id="certificateForm" style="display: none;">
+                <h3>Generate Your Certificate</h3>
+                <input type="text" id="certificateName" placeholder="Enter your name" required>
+                <input type="text" id="certificateAchievement" placeholder="Achievement (e.g., Science Expert)" required>
+                <button class="btn btn-primary" onclick="generateCertificate()">Generate Certificate</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>💬 Get in Touch</h2>
+            <p>Have questions? Let's chat!</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Connect With Us</h3>
+                <p>Follow our YouTube channel for more amazing content:</p>
+                <a href="https://www.youtube.com/@UC28hqtuIPXdBXCTZxm76wdQ" target="_blank" class="btn btn-primary">
+                    🎥 Subscribe on YouTube
+                </a>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send us a message</h3>
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WonderBot AI Assistant -->
+    <div class="wonderbot-widget">
+        <button class="bot-toggle" id="botToggle" title="Open WonderBot">
+            <span class="bot-icon">🤖</span>
+        </button>
+
+        <div class="bot-window" id="botWindow">
+            <div class="bot-header">
+                <h3>WonderBot</h3>
+                <button class="bot-close" id="botClose">×</button>
+            </div>
+
+            <div class="bot-messages" id="botMessages">
+                <div class="message bot-message">
+                    <p>Hi! 👋 I'm WonderBot. Ask me anything about technology, creativity, learning, or our channel!</p>
+                </div>
+            </div>
+
+            <div class="bot-quick-prompts" id="quickPrompts">
+                <button class="quick-prompt" onclick="sendQuickPrompt('What is AI?')">What is AI?</button>
+                <button class="quick-prompt" onclick="sendQuickPrompt('How do I get creative ideas?')">Creative Ideas</button>
+                <button class="quick-prompt" onclick="sendQuickPrompt('Tell me about robotics')">Robotics Tips</button>
+            </div>
+
+            <div class="bot-input-area">
+                <input type="text" id="botInput" placeholder="Ask me anything..." autocomplete="off">
+                <button id="botSendBtn" class="bot-send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 S&S WonderVerse. All rights reserved. ✨</p>
+        <p>Crafted with love for creators and learners worldwide</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="youtube-api.js"></script>
+    <script src="ai-service.js"></script>
+    <script src="idea-generator.js"></script>
+    <script src="quiz-system.js"></script>
+    <script src="certificate-generator.js"></script>
+    <script src="animations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
